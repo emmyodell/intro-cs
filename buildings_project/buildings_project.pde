@@ -3,7 +3,7 @@ void setup () {
   rectMode (CENTER);
   // night sky background
   building (400, 600, 250, 3);
-  building (700, 600, 200, 3);
+  building (700, 600, 200, 5);
 }
 
 void building (float xCenter, float yBottom, float w, int numWindows) {
@@ -16,11 +16,12 @@ void building (float xCenter, float yBottom, float w, int numWindows) {
 
 float xLeft = xCenter - w/2;
 float spacing = w/(numWindows + 1);
+float wWindow = w/(numWindows + 1) * 0.75;
 int l = 1;
 
 while (l <= numWindows) {
 rect (xLeft + l * spacing, yBottom - 400/2, 
-40, 40
+wWindow, 40
 );
 l = l +1;
 }
